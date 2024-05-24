@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "testsdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/smpb05/TestSDK",
+      "state" : {
+        "branch" : "main",
+        "revision" : "4ff178efba137e2146d9742a685b86f2275287c2"
+      }
+    }
+  ],
+  "version" : 2
+}

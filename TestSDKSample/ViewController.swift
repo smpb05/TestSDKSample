@@ -1,19 +1,22 @@
-//
-//  ViewController.swift
-//  TestSDKSample
-//
-//  Created by Anastasia Filinskaya on 24.05.2024.
-//
-
 import UIKit
+import WebKit
+import TestSDK
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var webView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let messageHandler = MessageHandler()
+        messageHandler.callback = { data in
+            // callback for example
+        }
+        
+        let provider = WebViewProvider.provider
+        provider.setWebView(webView: webView, messageHandler: messageHandler)
+        
+        let pageLoaded = provider.loadPage()
+        print(pageLoaded)   
     }
-
-
 }
 

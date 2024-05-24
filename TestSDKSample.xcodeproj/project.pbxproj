@@ -16,6 +16,7 @@
 		154B888E2C00737C00B3E072 /* TestSDKSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154B888D2C00737C00B3E072 /* TestSDKSampleTests.swift */; };
 		154B88982C00737C00B3E072 /* TestSDKSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154B88972C00737C00B3E072 /* TestSDKSampleUITests.swift */; };
 		154B889A2C00737C00B3E072 /* TestSDKSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154B88992C00737C00B3E072 /* TestSDKSampleUITestsLaunchTests.swift */; };
+		154B88A82C0073BF00B3E072 /* TestSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 154B88A72C0073BF00B3E072 /* TestSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154B88A82C0073BF00B3E072 /* TestSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = TestSDKSample;
+			packageProductDependencies = (
+				154B88A72C0073BF00B3E072 /* TestSDK */,
+			);
 			productName = TestSDKSample;
 			productReference = 154B88732C00737500B3E072 /* TestSDKSample.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 154B886A2C00737500B3E072;
+			packageReferences = (
+				154B88A62C0073BF00B3E072 /* XCRemoteSwiftPackageReference "TestSDK" */,
+			);
 			productRefGroup = 154B88742C00737500B3E072 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -596,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		154B88A62C0073BF00B3E072 /* XCRemoteSwiftPackageReference "TestSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/smpb05/TestSDK";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		154B88A72C0073BF00B3E072 /* TestSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 154B88A62C0073BF00B3E072 /* XCRemoteSwiftPackageReference "TestSDK" */;
+			productName = TestSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 154B886B2C00737500B3E072 /* Project object */;
 }
