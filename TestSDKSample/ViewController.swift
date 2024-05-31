@@ -8,15 +8,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let messageHandler = MessageHandler()
-        messageHandler.callback = { data in
-            // callback for example
+        messageHandler.onCallFinish = {
+            print("call is finished")
         }
         
         let provider = WebViewProvider.provider
-        provider.setWebView(webView: webView, messageHandler: messageHandler)
+        provider.setWebView(webView: webView, messageHandler: messageHandler, isVideoCall: false)
         
         let pageLoaded = provider.loadPage()
-        print(pageLoaded)   
+        print(pageLoaded)
     }
 }
 
